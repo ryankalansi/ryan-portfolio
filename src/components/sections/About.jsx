@@ -2,17 +2,73 @@ import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
   const frontendSkills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Bootstrap",
-    "Tailwind CSS",
+    {
+      name: "HTML",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      bg: "bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 hover:shadow-md cursor-pointer",
+    },
+    {
+      name: "CSS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      bg: "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:shadow-md cursor-pointer",
+    },
+    {
+      name: "JavaScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      bg: "bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 hover:shadow-md cursor-pointer",
+    },
+    {
+      name: "ReactJS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      bg: "bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 hover:shadow-md cursor-pointer",
+    },
+    {
+      name: "TailwindCSS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+      bg: "bg-teal-400/10 text-teal-300 hover:bg-teal-400/20 hover:shadow-md cursor-pointer",
+    },
+    {
+      name: "Bootstrap",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      bg: "bg-purple-500/10 text-purple-400 hover:bg-purple-500/20 hover:shadow-md cursor-pointer",
+    },
   ];
 
-  const backendSkills = ["NodeJS", "MySQL", "PHP"];
-  const designSkills = ["Figma", "Canva", "Adobe Illustrator"];
+  const backendSkills = [
+    {
+      name: "NodeJS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      bg: "bg-green-600/10 text-green-500 hover:bg-green-600/20 hover:shadow-md cursor-pointer",
+    },
+    {
+      name: "MySQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      bg: "bg-blue-600/10 text-blue-300 hover:bg-blue-600/20 hover:shadow-md cursor-pointer",
+    },
+    {
+      name: "PHP",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+      bg: "bg-indigo-500/10 text-indigo-300 hover:bg-indigo-500/20 hover:shadow-md cursor-pointer",
+    },
+  ];
+
+  const designSkills = [
+    {
+      name: "Figma",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      bg: "bg-pink-500/10 text-pink-400 hover:bg-pink-500/20 hover:shadow-md cursor-pointer",
+    },
+    {
+      name: "Canva",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+      bg: "bg-blue-400/10 text-blue-300 hover:bg-blue-400/20 hover:shadow-md cursor-pointer",
+    },
+    {
+      name: "Adobe Illustrator",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
+      bg: "bg-orange-400/10 text-orange-300 hover:bg-orange-400/20 hover:shadow-md cursor-pointer",
+    },
+  ];
 
   return (
     <section
@@ -36,39 +92,56 @@ export const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4">Front-end</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {frontendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition"
+                      className={`flex items-center gap-2 py-2 px-3 rounded-full text-sm transition-all ${tech.bg}`}
                     >
-                      {tech}
+                      <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="w-4 h-4"
+                      />
+                      {tech.name}
                     </span>
                   ))}
                 </div>
               </div>
+
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4">Back-end</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {backendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition"
+                      className={`flex items-center gap-2 py-2 px-3 rounded-full text-sm transition-all ${tech.bg}`}
                     >
-                      {tech}
+                      <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="w-4 h-4"
+                      />
+                      {tech.name}
                     </span>
                   ))}
                 </div>
               </div>
+
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4">Design</h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {designSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition"
+                      className={`flex items-center gap-2 py-2 px-3 rounded-full text-sm transition-all ${tech.bg}`}
                     >
-                      {tech}
+                      <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="w-4 h-4"
+                      />
+                      {tech.name}
                     </span>
                   ))}
                 </div>

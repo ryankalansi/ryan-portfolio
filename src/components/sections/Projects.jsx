@@ -1,5 +1,138 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
+const techStack = [
+  {
+    name: "HTML",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    bg: "bg-orange-500/10 text-orange-500 hover:bg-orange-500/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    bg: "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    bg: "bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "Bootstrap",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+    bg: "bg-purple-500/10 text-purple-400 hover:bg-purple-500/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "ReactJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    bg: "bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "TailwindCSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    bg: "bg-teal-400/10 text-teal-300 hover:bg-teal-400/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "NodeJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    bg: "bg-green-600/10 text-green-500 hover:bg-green-600/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "MySQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    bg: "bg-blue-600/10 text-blue-300 hover:bg-blue-600/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "PHP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    bg: "bg-indigo-500/10 text-indigo-300 hover:bg-indigo-500/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "ExpressJS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    bg: "bg-neutral-800 text-white hover:bg-neutral-700 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    bg: "bg-blue-800/10 text-blue-400 hover:bg-blue-800/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "TensorFlow",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+    bg: "bg-orange-600/10 text-orange-500 hover:bg-orange-600/20 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "FlaskAPI",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
+    bg: "bg-neutral-700 text-white hover:bg-neutral-600 hover:shadow-md cursor-pointer",
+  },
+  {
+    name: "Adobe Illustrator",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
+    bg: "bg-orange-400/10 text-orange-300 hover:bg-orange-400/20 hover:shadow-md cursor-pointer",
+  },
+];
+
+const getTechData = (names) =>
+  names
+    .map((name) => techStack.find((item) => item.name === name))
+    .filter(Boolean);
+
+const projects = [
+  {
+    title: "Smart Recruiter",
+    description:
+      "Led a team of six to develop a web application that analyzes resumes and recommends suitable jobs using AI. I served as the Front-End Developer, responsible for building a responsive user interface using React.js and Tailwind CSS. The application displays an overall resume score along with a list of job recommendations. This project was completed as part of a culminating challenge during a coding camp program.",
+    note: "The server must be running to access the full features, especially the results section. This project is still under active development to deliver improved versions in the future.",
+    tech: [
+      "ReactJS",
+      "TailwindCSS",
+      "NodeJS",
+      "ExpressJS",
+      "PostgreSQL",
+      "TensorFlow",
+      "FlaskAPI",
+    ],
+    link: "https://studiodirootslab.com/",
+  },
+  {
+    title: "Studiodirootslab",
+    description:
+      "Delivered a fully functional and visually engaging website for a photo and video studio within a 1-month timeline.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    link: "https://studiodirootslab.com/",
+  },
+  {
+    title: "Ocra Activity",
+    description:
+      "A shop offering outdoor goods and clothing with a classic yet modern website design that emphasizes aesthetics.",
+    tech: ["HTML", "CSS", "Bootstrap"],
+    link: "https://ocraactivity.com/",
+  },
+  {
+    title:
+      "Final Project - Web Programming & Human-Computer Interaction Course",
+    description:
+      "Making the final project of the course with the theme of education (Front-End and Back-End bootcamp), contributing as chairman and getting the most satisfactory results in making it with the team.",
+    tech: ["PHP", "CSS", "Bootstrap", "JavaScript", "MySQL"],
+    link: "http://kelompok1pbw.infinityfreeapp.com",
+  },
+  {
+    title: "TK KUTILANG - WIP",
+    description:
+      "Ongoing school website development using user-centered design principles.",
+    tech: ["HTML", "CSS", "Bootstrap"],
+    link: "https://ryankalansi.github.io/kutilang1/",
+  },
+  {
+    title: "Logo Design - Yakosei",
+    description:
+      "Logo design for coffee brand 'Yakosei' with a nocturnal theme.",
+    tech: ["Adobe Illustrator"],
+    link: "https://www.instagram.com/yakosei.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+  },
+];
+
 export const Projects = () => {
   return (
     <section
@@ -8,147 +141,47 @@ export const Projects = () => {
     >
       <RevealOnScroll>
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400  bg-clip-text text-transparent text-center">
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             Featured Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Studio */}
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.4)] transition-all">
-              <h3 className="text-xl font-bold mb-2">Studiodirootslab</h3>
-              <p className="text-gray-400 mb-4">
-                Delivered a fully functional and visually engaging website for a
-                photo and video studio within a 1-month timeline.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["Html, CSS, JavaScript"].map((tech, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
+            {projects.map((project, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.4)] transition-all"
+              >
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-400 mb-4">{project.description}</p>
+                {project.note && (
+                  <p className="text-gray-400 mb-4">
+                    <strong>Note:</strong> {project.note}
+                  </p>
+                )}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {getTechData(project.tech).map((tech, key) => (
+                    <span
+                      key={key}
+                      className={`flex items-center gap-2 py-1 px-3 rounded-full text-sm transition-all ${tech.bg}`}
+                    >
+                      <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        className="w-4 h-4"
+                      />
+                      {tech.name}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex justify-between items-center">
+                  <a
+                    href={project.link}
+                    className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                   >
-                    {tech}
-                  </span>
-                ))}
+                    View Project →
+                  </a>
+                </div>
               </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://studiodirootslab.com/"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project →
-                </a>
-              </div>
-            </div>
-
-            {/* Ocra */}
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.4)] transition-all">
-              <h3 className="text-xl font-bold mb-2">Ocra Activity </h3>
-              <p className="text-gray-400 mb-4">
-                A shop offering outdoor goods and clothing with a classic yet
-                modern website design that emphasizes aesthetics.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["Html, CSS, Bootstrap"].map((tech, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://ocraactivity.com/"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project →
-                </a>
-              </div>
-            </div>
-
-            {/* Bootcamp */}
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.4)] transition-all">
-              <h3 className="text-xl font-bold mb-2">
-                Final Project - Web Programming & Human-Computer Interaction
-                Course
-              </h3>
-              <p className="text-gray-400 mb-4">
-                Making the final project of the course with the theme of
-                education (Front-End and Back-End bootcamp), contributing as
-                chairman and getting the most satisfactory results in making it
-                with the team.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["PHP, CSS, Bootstrap, JavaScript, MySQL"].map((tech, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="http://kelompok1pbw.infinityfreeapp.com"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project →
-                </a>
-              </div>
-            </div>
-
-            {/* Kutilang */}
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.4)] transition-all">
-              <h3 className="text-xl font-bold mb-2">TK KUTILANG - WIP</h3>
-              <p className="text-gray-400 mb-4">
-                Ongoing school website development using user-centered design
-                principles.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["Html, CSS, Bootstrap"].map((tech, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://ryankalansi.github.io/kutilang1/"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project →
-                </a>
-              </div>
-            </div>
-
-            <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.4)] transition-all">
-              <h3 className="text-xl font-bold mb-2">Logo Design - Yakosei</h3>
-              <p className="text-gray-400 mb-4">
-                Logo design for coffee brand "Yakosei" with a nocturnal theme
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {["Adobe Illustrator"].map((tech, key) => (
-                  <span
-                    key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex justify-between items-center">
-                <a
-                  href="https://www.instagram.com/yakosei.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
-                >
-                  View Project →
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </RevealOnScroll>
