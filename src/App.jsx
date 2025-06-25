@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
@@ -27,6 +28,7 @@ function App() {
         <About />
         <Projects />
         <Contact />
+        <Analytics />
       </div>
     </>
   );
