@@ -93,7 +93,8 @@ const projects = [
       "TensorFlow",
       "FlaskAPI",
     ],
-    link: "https://studiodirootslab.com/",
+    link: "https://smart-recruiter-capstone.vercel.app/",
+    demo: "https://youtu.be/KEejlM_DXOc",
   },
   {
     title: "Studiodirootslab",
@@ -122,7 +123,7 @@ const projects = [
     description:
       "Ongoing school website development using user-centered design principles.",
     tech: ["HTML", "CSS", "Bootstrap"],
-    link: "https://ryankalansi.github.io/kutilang1/",
+    link: "https://ryankalansi.github.io/kutilang/",
   },
   {
     title: "Logo Design - Yakosei",
@@ -172,13 +173,35 @@ export const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex flex-wrap gap-3 pt-5">
                   <a
                     href={project.link}
-                    className="text-blue-400 hover:text-blue-300 transition-colors my-4"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25 font-medium"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    View Project →
+                    <img
+                      src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/icons/external-link.svg"
+                      alt="external link"
+                      className="w-4 h-4 filter invert"
+                    />
+                    View Project
                   </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      className="inline-flex items-center gap-2 px-4 py-2 border border-green-500/50 text-green-400 hover:bg-green-500/10 hover:border-green-500 rounded-lg transition-all duration-200 font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/icons/play.svg"
+                        alt="play"
+                        className="w-4 h-4 filter brightness-0 invert"
+                      />
+                      Watch Demo
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
