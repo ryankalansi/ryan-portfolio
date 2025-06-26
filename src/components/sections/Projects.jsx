@@ -111,14 +111,6 @@ const projects = [
     link: "https://ocraactivity.com/",
   },
   {
-    title:
-      "Final Project - Web Programming & Human-Computer Interaction Course",
-    description:
-      "Making the final project of the course with the theme of education (Front-End and Back-End bootcamp), contributing as chairman and getting the most satisfactory results in making it with the team.",
-    tech: ["PHP", "CSS", "Bootstrap", "JavaScript", "MySQL"],
-    link: "http://kelompok1pbw.infinityfreeapp.com",
-  },
-  {
     title: "TK KUTILANG - WIP",
     description:
       "Ongoing school website development using user-centered design principles.",
