@@ -110,13 +110,13 @@ const projects = [
     tech: ["HTML", "CSS", "Bootstrap"],
     link: "https://ocraactivity.com/",
   },
-  {
-    title: "TK KUTILANG - WIP",
-    description:
-      "Ongoing school website development using user-centered design principles.",
-    tech: ["HTML", "CSS", "Bootstrap"],
-    link: "https://ryankalansi.github.io/kutilang/",
-  },
+  // {
+  //   title: "TK KUTILANG - WIP",
+  //   description:
+  //     "Ongoing school website development using user-centered design principles.",
+  //   tech: ["HTML", "CSS", "Bootstrap"],
+  //   link: "https://ryankalansi.github.io/kutilang/",
+  // },
   {
     title: "Logo Design - Yakosei",
     description:
