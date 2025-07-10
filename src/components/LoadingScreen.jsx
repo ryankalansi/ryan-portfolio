@@ -5,18 +5,21 @@ export const LoadingScreen = ({ onComplete }) => {
   const fullText = "Hello 👋";
 
   useEffect(() => {
+    const chars = Array.from(fullText);
     let index = 0;
-    const interval = setInterval(() => {
-      setText(fullText.substring(0, index));
-      index++;
-      if (index > fullText.length) {
-        clearInterval(interval);
 
+    const interval = setInterval(() => {
+      setText(chars.slice(0, index).join(""));
+      index++;
+
+      if (index > chars.length) {
+        clearInterval(interval);
         setTimeout(() => {
           onComplete();
         }, 1000);
       }
     }, 100);
+
     return () => clearInterval(interval);
   }, [onComplete]);
 
