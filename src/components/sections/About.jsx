@@ -83,10 +83,10 @@ export const About = () => {
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className="text-gray-300 mb-6">
-              I am an enthusiastic Web Developer with a focus on Front-end
-              development, currently deepening in Full-stack technologies. I am
-              highly adaptable, open to learning new skills, and effective in
-              teamwork settings to drive successful outcomes
+              I’m a Web Developer passionate about Front-End development while
+              growing in Project Management. I enjoy turning ideas into
+              responsive, engaging products while ensuring collaboration,
+              clarity, and impact throughout the process.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

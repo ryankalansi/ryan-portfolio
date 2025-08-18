@@ -13,8 +13,9 @@ export const Home = () => {
           </h1>
 
           <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            I'm a front-end developer, passionate about crafting innovative,
-            user-centric solutions.
+            Front-End Developer & Project Management Enthusiast — building
+            user-focused digital solutions through clean code and collaborative
+            strategy.
           </p>
 
           <div className="flex justify-center space-x-4">
