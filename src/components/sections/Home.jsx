@@ -1,6 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import profilePic from "../../assets/profile.jpg";
-// import profilePic2 from "../../assets/profile-2.jpg";
 
 export const Home = () => {
   return (
@@ -32,28 +31,24 @@ export const Home = () => {
                 </span>
               </h1>
 
-              <p className="text-gray-400 text-lg mb-4 max-w-lg leading-relaxed">
-                Front-End Developer specializing in{" "}
-                <span className="text-emerald-400 font-medium">
-                  React.js & Next.js,
-                </span>{" "}
-                building responsive websites and internal web systems for real
-                clients.
-              </p>
-
-              {/* Tech badges */}
-              <div className="flex flex-wrap gap-2 mb-8">
-                {["React.js", "Next.js", "TailwindCSS", "PHP", "MySQL"].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs px-3 py-1 rounded-full border border-white/10 text-gray-400 bg-white/5"
-                    >
-                      {tech}
-                    </span>
-                  ),
-                )}
+              <div className="text-gray-400 text-lg mb-2 max-w-lg leading-relaxed">
+                <p>
+                  Front-End Developer specializing in{" "}
+                  <span className="text-emerald-400 font-medium">
+                    React.js & Next.js
+                  </span>
+                </p>
+                <p className="mt-2">
+                  I help businesses build scalable internal dashboards and
+                  engaging company profiles, turning complex ideas into seamless
+                  digital experiences.
+                </p>
               </div>
+
+              <p className="text-gray-500 text-sm mb-6 max-w-lg">
+                Currently open for new opportunities to collaborate and build
+                something great together.
+              </p>
 
               <div className="flex flex-wrap gap-3">
                 <a
@@ -86,11 +81,6 @@ export const Home = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-emerald-500/30 to-cyan-500/20 blur-xl" />
                 {/* Photo container */}
                 <div className="relative w-full h-full rounded-full border-2 border-emerald-500/30 overflow-hidden bg-gray-800">
-                  {/* 
-                    GANTI src di bawah dengan path foto kamu
-                    Contoh: src="/foto-ryan.jpg" 
-                    atau: src={require('../assets/foto.jpg')}
-                  */}
                   <img
                     src={profilePic}
                     alt="Ryan Kalansi"
@@ -100,7 +90,6 @@ export const Home = () => {
                       e.target.nextSibling.style.display = "flex";
                     }}
                   />
-                  {/* Fallback kalau foto belum ada */}
                   <div
                     className="w-full h-full items-center justify-center text-6xl hidden"
                     style={{ display: "none" }}

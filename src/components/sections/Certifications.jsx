@@ -21,7 +21,8 @@ const certifications = [
     title: "Information Systems Auditing, Controls and Assurance",
     issuer: "The Hong Kong University of Science and Technology (HKUST)",
     year: "2023",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
+    // Using a generic academic/certificate icon instead of Trello
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/coursera/coursera-original.svg",
     color: "bg-yellow-500/10 border-yellow-500/20 text-yellow-400",
     link: "https://drive.google.com/file/d/1KcrmmgBq1v0tB4qcqAAEFcTP_yh6j_YW/view?usp=drive_link",
   },

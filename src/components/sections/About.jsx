@@ -42,7 +42,6 @@ export const About = () => {
   const backendSkills = [
     {
       name: "NodeJS",
-      // green- → teal- (Water family, Bazi-safe)
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       bg: "bg-teal-600/10 text-teal-400 hover:bg-teal-600/20 hover:shadow-md cursor-pointer",
     },
@@ -72,7 +71,6 @@ export const About = () => {
     {
       name: "Figma",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-      // pink- → amber- (Earth family, Bazi-safe)
       bg: "bg-amber-500/10 text-amber-400 hover:bg-amber-500/20 hover:shadow-md cursor-pointer",
     },
     {
@@ -89,9 +87,9 @@ export const About = () => {
 
   const experiences = [
     {
-      role: "Freelance Web Developer",
+      role: "Freelance Front-End Web Developer",
       period: "Apr 2023 – Present",
-      desc: "Independently developed and delivered web systems for clients, including a full-stack school enrollment system, an internal finance dashboard, and a business management system.",
+      desc: "Independently built and delivered 8+ web projects, including internal dashboards and company profiles for various clients (studio, education, and business sectors).",
     },
     {
       role: "Deputy IT Dev Bureau – BEM FIKTI UG",
@@ -126,24 +124,24 @@ export const About = () => {
               About Me
             </p>
             <h2 className="text-3xl font-bold text-white">
-              Developer. Builder. Problem Solver.
+              Bridging Code, Design, and Business Needs.
             </h2>
           </div>
 
           <div className="rounded-2xl p-8 border border-white/10 bg-white/2 mb-8">
             <p className="text-gray-300 text-base leading-relaxed mb-8">
-              I'm a Front-End Developer with{" "}
-              <span className="text-emerald-400 font-medium">2+ years</span> of
-              experience delivering real-world web applications for clients
-              across education, studio, and business sectors. From responsive
-              landing pages to full-scale internal dashboards. I build clean,
-              maintainable code that works.
+              I'm a Front-End Developer with over{" "}
+              <span className="text-emerald-400 font-medium">2 years</span> of
+              hands-on experience building tailored web solutions. Whether it's
+              crafting an interactive landing page or architecting a complex
+              internal dashboard, my focus is always on writing clean code that
+              directly solves client problems and drives actual value.
             </p>
 
             <div className="grid grid-cols-3 gap-4 mb-8 pb-8 border-b border-white/10">
               {[
-                { num: "5+", label: "Projects delivered" },
-                { num: "3+", label: "Real clients" },
+                { num: "8+", label: "Projects delivered" },
+                { num: "5+", label: "Real clients" },
                 { num: "3.82", label: "GPA / 4.00" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">

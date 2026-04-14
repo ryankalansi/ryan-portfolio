@@ -40,7 +40,7 @@ export const Contact = () => {
             </p>
             <h2 className="text-3xl font-bold text-white">Get In Touch</h2>
             <p className="text-gray-500 text-sm mt-3">
-              Have a project in mind? Let's talk.
+              Have a project in mind, or just want to say hi? Let's connect.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export const Contact = () => {
               type="submit"
               className="w-full bg-emerald-500 hover:bg-emerald-400 text-white py-3 px-6 rounded-xl font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(52,211,153,0.4)]"
             >
-              Send Message
+              Send Message 🚀
             </button>
           </form>
 
