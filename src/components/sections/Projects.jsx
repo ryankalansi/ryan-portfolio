@@ -38,7 +38,6 @@ const techStack = [
   },
   {
     name: "NodeJS",
-    // green- → teal- (Water/Metal family)
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     bg: "bg-teal-600/10 text-teal-400 hover:bg-teal-600/20 cursor-pointer",
   },
@@ -69,7 +68,6 @@ const techStack = [
   },
   {
     name: "TensorFlow",
-    // orange is Earth element = safe
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
     bg: "bg-orange-600/10 text-orange-500 hover:bg-orange-600/20 cursor-pointer",
   },
@@ -97,7 +95,7 @@ const projects = [
       "Full-scale internal ERP-style web system with 7 modules: executive dashboard, product & inventory management, multi-tier partner database, order processing, cash flow tracking, sales performance, and sample expense management.",
     badge: "Private — Internal System",
     thumbnail: "/thumbnails/trujiva.png",
-    showcaseLink: "/projects/trujiva",
+    showcaseId: "trujiva", // <-- Diubah dari showcaseLink menjadi showcaseId
     tech: ["NextJS", "ReactJS", "TailwindCSS", "PostgreSQL", "Supabase"],
   },
   {
@@ -106,13 +104,13 @@ const projects = [
       "Private internal finance dashboard for Roots Laboratory featuring expense tracking, overtime management, real-time budget monitoring, period-based filtering, and downloadable monthly reports.",
     badge: "Private — Internal System",
     thumbnail: "/thumbnails/roots-finance.png",
-    showcaseLink: "/projects/roots-finance",
+    showcaseId: "roots-finance", // <-- Disiapkan untuk showcase Roots Finance nanti
     tech: ["NextJS", "ReactJS", "TailwindCSS", "PostgreSQL", "Supabase"],
   },
   {
     title: "TK Kutilang — School Web System",
     description:
-      "Complete full-stack web system for a kindergarten in Bekasi — responsive 7-page public profile site + admin dashboard with student enrollment tracking, data filtering, Excel export, and secure admin login.",
+      "Complete full-stack web system for a kindergarten in Bekasi. Responsive 7-page public profile site + admin dashboard with student enrollment tracking, data filtering, Excel export, and secure admin login.",
     thumbnail: "/thumbnails/kutilang.png",
     tech: ["HTML", "CSS", "Bootstrap", "PHP", "MySQL"],
     link: "https://kutilang.sch.id/",
@@ -120,7 +118,7 @@ const projects = [
   {
     title: "Smart Recruiter",
     description:
-      "Led a team of 6 to build an AI-powered recruitment web app. Analyzes uploaded resumes, generates a score, and recommends matching jobs. Delivered a fully responsive production-ready UI within a coding camp deadline.",
+      "Led a team of 6 to build an AI-powered recruitment web app. Analyzes uploaded resumes, generates a score, and recommends matching jobs.",
     thumbnail: "/thumbnails/smart-recruiter.png",
     tech: [
       "ReactJS",
@@ -149,6 +147,7 @@ const projects = [
     thumbnail: "/thumbnails/ocraactivity.png",
     badge: "Domain deactivated by client",
     tech: ["HTML", "CSS", "Bootstrap"],
+    link: "https://ryankalansi.github.io/ocraactivity/",
   },
   {
     title: "Logo Design — Yakosei",
@@ -160,7 +159,8 @@ const projects = [
   },
 ];
 
-export const Projects = () => {
+// Menerima props onOpenShowcase dari App.jsx
+export const Projects = ({ onOpenShowcase }) => {
   return (
     <section
       id="projects"
@@ -231,15 +231,16 @@ export const Projects = () => {
                     ))}
                   </div>
 
-                  {(project.link || project.demo || project.showcaseLink) && (
+                  {(project.link || project.demo || project.showcaseId) && (
                     <div className="flex flex-wrap gap-2 pt-3 mt-auto border-t border-white/5">
-                      {project.showcaseLink && (
-                        <a
-                          href={project.showcaseLink}
-                          className="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 hover:border-emerald-500/40 rounded-lg transition-all text-sm font-medium"
+                      {/* Tombol yang memicu fungsi internal React */}
+                      {project.showcaseId && (
+                        <button
+                          onClick={() => onOpenShowcase(project.showcaseId)}
+                          className="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 hover:border-emerald-500/40 rounded-lg transition-all text-sm font-medium cursor-pointer"
                         >
                           View Showcase →
-                        </a>
+                        </button>
                       )}
                       {project.link && (
                         <a
@@ -259,7 +260,6 @@ export const Projects = () => {
                       {project.demo && (
                         <a
                           href={project.demo}
-                          // green- → emerald- (safe)
                           className="inline-flex items-center gap-1.5 px-4 py-2 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all text-sm font-medium"
                           target="_blank"
                           rel="noopener noreferrer"

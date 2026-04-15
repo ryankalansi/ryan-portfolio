@@ -5,7 +5,7 @@ const certifications = [
     title: "Google Project Management",
     issuer: "Google",
     year: "2025",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+    icon: "/icons/google.png",
     color: "bg-blue-500/10 border-blue-500/20 text-blue-400",
     link: "https://drive.google.com/file/d/1U4sZrN0fv42bd5i5LY1nhoG6-mt1gkGj/view?usp=drive_link",
   },
@@ -13,7 +13,7 @@ const certifications = [
     title: "Front-End & Back-End Developer",
     issuer: "Coding Camp powered by DBS Foundation",
     year: "2025",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    icon: "/icons/DBS-Foundation.png",
     color: "bg-emerald-500/10 border-emerald-500/20 text-emerald-400",
     link: "https://drive.google.com/file/d/1O-3uTmU4Z117Wkn8LVhdBjNhVdTOVTnQ/view?usp=drive_link",
   },
@@ -21,8 +21,7 @@ const certifications = [
     title: "Information Systems Auditing, Controls and Assurance",
     issuer: "The Hong Kong University of Science and Technology (HKUST)",
     year: "2023",
-    // Using a generic academic/certificate icon instead of Trello
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/coursera/coursera-original.svg",
+    icon: "/icons/Hong-Kong-University-of-Science.webp",
     color: "bg-yellow-500/10 border-yellow-500/20 text-yellow-400",
     link: "https://drive.google.com/file/d/1KcrmmgBq1v0tB4qcqAAEFcTP_yh6j_YW/view?usp=drive_link",
   },
@@ -53,8 +52,12 @@ export const Certifications = () => {
                   {cert.year}
                 </span>
 
-                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
-                  <img src={cert.icon} alt={cert.issuer} className="w-6 h-6" />
+                <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center">
+                  <img
+                    src={cert.icon}
+                    alt={cert.issuer}
+                    className="w-10 h-10 object-contain"
+                  />
                 </div>
 
                 <div className="flex-1">
