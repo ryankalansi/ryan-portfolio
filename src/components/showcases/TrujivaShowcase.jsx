@@ -39,7 +39,7 @@ export const TrujivaShowcase = ({ onClose }) => {
 
           <p className="text-gray-400 text-lg max-w-2xl leading-relaxed mb-8">
             A full-scale internal ERP-style web system built for Trujiva, a
-            product distribution business under Rumah Perubahan — covering 7
+            product distribution business under Rumah Perubahan, covering 7
             operational modules from executive dashboard to partner management.
           </p>
 
@@ -75,7 +75,7 @@ export const TrujivaShowcase = ({ onClose }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             {[
               { num: "7", label: "Operational modules" },
-              { num: "5+", label: "Partner tiers managed" },
+              { num: "5", label: "Partner tiers managed" },
               { num: "1", label: "Month to deliver" },
             ].map((stat) => (
               <div
@@ -92,7 +92,7 @@ export const TrujivaShowcase = ({ onClose }) => {
 
           <p className="text-gray-700 leading-relaxed text-base">
             Trujiva needed a centralized system to manage their product
-            distribution operations — tracking inventory, partners, orders, and
+            distribution operations, tracking inventory, partners, orders, and
             cash flow all in one place. I designed and built the entire system
             from scratch, including role-based login, period-based reporting,
             and a master Excel export for monthly review.
@@ -224,15 +224,15 @@ export const TrujivaShowcase = ({ onClose }) => {
                 caption: "Executive Dashboard",
               },
               {
-                src: "/showcases/trujiva/product-management.png",
+                src: "/showcases/trujiva/manajemen-produk.png",
                 caption: "Manajemen Produk",
               },
               {
-                src: "/showcases/trujiva/cashflow-stock.png",
+                src: "/showcases/trujiva/arus-kas.png",
                 caption: "Arus Kas & Stok Gabungan",
               },
               {
-                src: "/showcases/trujiva/sales-performance.png",
+                src: "/showcases/trujiva/performa.png",
                 caption: "Performa Jualan Mitra",
               },
             ].map((ss) => (
@@ -291,8 +291,8 @@ export const TrujivaShowcase = ({ onClose }) => {
           </h2>
           <ul className="space-y-4">
             {[
-              "Building a multi-module system requires careful state and data architecture upfront — I learned to plan database schema and component structure before writing a single line of UI code.",
-              "Real clients have evolving requirements — I practiced handling mid-project scope changes while keeping delivery on schedule.",
+              "Building a multi-module system requires careful state and data architecture upfront. I learned to plan database schema and component structure before writing a single line of UI code.",
+              "Clients have evolving requirements. I practiced handling mid-project scope changes while keeping delivery on schedule.",
               "Supabase Row Level Security (RLS) taught me how to implement proper role-based access control at the database level, not just the UI.",
               "Period-based filtering and Excel export required me to think about data aggregation and formatting beyond just displaying records.",
             ].map((item, idx) => (

@@ -140,8 +140,8 @@ export const About = () => {
 
             <div className="grid grid-cols-3 gap-4 mb-8 pb-8 border-b border-white/10">
               {[
-                { num: "8+", label: "Projects delivered" },
-                { num: "5+", label: "Clients" },
+                { num: "5+", label: "Projects delivered" },
+                { num: "3+", label: "Clients" },
                 { num: "3.82", label: "GPA / 4.00" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
