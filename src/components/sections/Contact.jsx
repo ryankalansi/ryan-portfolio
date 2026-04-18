@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
-import emailjs from "emailjs-com";
+import toast from "react-hot-toast";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,22 +8,41 @@ export const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSending, setIsSending] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSending(true);
 
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
-        e.target,
-        import.meta.env.VITE_PUBLIC_KEY,
-      )
-      .then(() => {
-        alert("Message Sent!");
+    const loadingToast = toast.loading("Sending your message...");
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Kalimat diganti agar tidak ketahuan pakai Resend
+        toast.success("Message sent! I'll get back to you shortly.", {
+          id: loadingToast,
+        });
         setFormData({ name: "", email: "", message: "" });
-      })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to send");
+      }
+    } catch (err) {
+      console.error("Submission Error:", err);
+      toast.error("Failed to send message. Please try again later.", {
+        id: loadingToast,
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -33,7 +52,6 @@ export const Contact = () => {
     >
       <RevealOnScroll>
         <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
-          {/* Header — consistent with other sections */}
           <div className="text-center mb-10">
             <p className="text-emerald-400 text-sm font-medium tracking-widest uppercase mb-2">
               Contact
@@ -92,13 +110,13 @@ export const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-emerald-500 hover:bg-emerald-400 text-white py-3 px-6 rounded-xl font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(52,211,153,0.4)]"
+              disabled={isSending}
+              className="w-full bg-emerald-500 hover:bg-emerald-400 disabled:opacity-50 text-white py-3 px-6 rounded-xl font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(52,211,153,0.4)]"
             >
-              Send Message 🚀
+              {isSending ? "Sending..." : "Send Message 🚀"}
             </button>
           </form>
 
-          {/* Social links */}
           <div className="flex items-center gap-4 mt-8 justify-center">
             <div className="flex-1 h-px bg-white/5" />
             <span className="text-gray-600 text-xs">or reach me via</span>

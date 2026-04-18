@@ -9,6 +9,7 @@ import { Activities } from "./components/sections/Activities";
 import { Contact } from "./components/sections/Contact";
 import { TrujivaShowcase } from "./components/showcases/TrujivaShowcase";
 import { RootsFinanceShowcase } from "./components/showcases/RootsFinanceShowcase";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,9 +35,12 @@ function App() {
 
   return (
     <>
+      {/* Container untuk notifikasi toast */}
+      <Toaster position="bottom-right" reverseOrder={false} />
+
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
 
-      {/* Showcase overlay — hanya render kalau ada activeShowcase */}
+      {/* Showcase overlay */}
       {(activeShowcase === "trujiva" || activeShowcase === "roots-finance") && (
         <div
           style={{
