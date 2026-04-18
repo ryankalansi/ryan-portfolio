@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 
-// Menerima props 'onClose' jika dipanggil sebagai Modal,
-// atau biarkan kosong jika di-render sebagai page via React Router.
 export const TrujivaShowcase = ({ onClose }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -213,10 +211,6 @@ export const TrujivaShowcase = ({ onClose }) => {
             System preview
           </h2>
 
-          {/* 
-            Taruh screenshot di folder /public/showcases/trujiva/
-            Nama file bebas, sesuaikan src di bawah.
-          */}
           <div className="grid grid-cols-1 gap-8">
             {[
               {
@@ -265,10 +259,10 @@ export const TrujivaShowcase = ({ onClose }) => {
             {[
               "Built and deployed solo in under 6 weeks",
               "Period-based reporting with Excel export",
-              "Role-based access control (admin / staff)",
+              "Role-based access control",
               "Real-time data via Supabase PostgreSQL",
               "7 modules in one unified system",
-              "Fully responsive — mobile & desktop",
+              "Fully responsive (mobile & desktop)",
             ].map((item) => (
               <div
                 key={item}
