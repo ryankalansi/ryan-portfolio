@@ -33,7 +33,7 @@ export const Home = () => {
 
               <div className="text-gray-400 text-lg mb-2 max-w-lg leading-relaxed">
                 <p>
-                  Front-End Developer specializing in{" "}
+                  Web Developer specializing in{" "}
                   <span className="text-emerald-400 font-medium">
                     React.js & Next.js
                   </span>

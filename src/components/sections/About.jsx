@@ -130,7 +130,7 @@ export const About = () => {
 
           <div className="rounded-2xl p-8 border border-white/10 bg-white/2 mb-8">
             <p className="text-gray-300 text-base leading-relaxed mb-8">
-              I'm a Front-End Developer with over{" "}
+              I'm a Web Developer with over{" "}
               <span className="text-emerald-400 font-medium">2 years</span> of
               hands-on experience building tailored web solutions. Whether it's
               crafting an interactive landing page or architecting a complex
@@ -140,7 +140,7 @@ export const About = () => {
 
             <div className="grid grid-cols-3 gap-4 mb-8 pb-8 border-b border-white/10">
               {[
-                { num: "5+", label: "Projects delivered" },
+                { num: "6", label: "Projects delivered" },
                 { num: "3+", label: "Clients" },
                 { num: "3.82", label: "GPA / 4.00" },
               ].map((stat) => (
