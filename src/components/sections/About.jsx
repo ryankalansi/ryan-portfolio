@@ -87,7 +87,7 @@ export const About = () => {
 
   const experiences = [
     {
-      role: "Freelance Front-End Web Developer",
+      role: "Freelance Web Developer",
       period: "Apr 2023 – Present",
       desc: "Independently built and delivered 8+ web projects, including internal dashboards and company profiles for various clients (studio, education, and business sectors).",
     },
