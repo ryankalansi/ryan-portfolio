@@ -18,6 +18,11 @@ export const About = () => {
       bg: "bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 hover:shadow-md cursor-pointer",
     },
     {
+      name: "TypeScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      bg: "bg-blue-600/10 text-blue-400 hover:bg-blue-600/20 hover:shadow-md cursor-pointer",
+    },
+    {
       name: "ReactJS",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       bg: "bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 hover:shadow-md cursor-pointer",

@@ -17,6 +17,11 @@ const techStack = [
     bg: "bg-yellow-400/20 text-yellow-400 hover:bg-yellow-400/30 cursor-pointer",
   },
   {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    bg: "bg-blue-600/10 text-blue-400 hover:bg-blue-600/20 hover:shadow-md cursor-pointer",
+  },
+  {
     name: "Bootstrap",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     bg: "bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20 cursor-pointer",
@@ -95,8 +100,15 @@ const projects = [
       "Full-scale internal ERP-style web system with 7 modules: executive dashboard, product & inventory management, multi-tier partner database, order processing, cash flow tracking, sales performance, and sample expense management.",
     badge: "Private — Internal System",
     thumbnail: "/thumbnails/trujiva.png",
-    showcaseId: "trujiva", // <-- Diubah dari showcaseLink menjadi showcaseId
-    tech: ["NextJS", "ReactJS", "TailwindCSS", "PostgreSQL", "Supabase"],
+    showcaseId: "trujiva",
+    tech: [
+      "NextJS",
+      "ReactJS",
+      "TypeScript",
+      "TailwindCSS",
+      "PostgreSQL",
+      "Supabase",
+    ],
   },
   {
     title: "Roots Finance Dashboard",
@@ -104,15 +116,22 @@ const projects = [
       "Private internal finance dashboard for Roots Laboratory featuring expense tracking, overtime management, real-time budget monitoring, period-based filtering, and downloadable monthly reports.",
     badge: "Private — Internal System",
     thumbnail: "/thumbnails/roots-finance.png",
-    showcaseId: "roots-finance", // <-- Disiapkan untuk showcase Roots Finance nanti
-    tech: ["NextJS", "ReactJS", "TailwindCSS", "PostgreSQL", "Supabase"],
+    showcaseId: "roots-finance",
+    tech: [
+      "NextJS",
+      "ReactJS",
+      "TypeScript",
+      "TailwindCSS",
+      "PostgreSQL",
+      "Supabase",
+    ],
   },
   {
     title: "TK Kutilang — School Web System",
     description:
       "Complete full-stack web system for a kindergarten in Bekasi. Responsive 7-page public profile site + admin dashboard with student enrollment tracking, data filtering, Excel export, and secure admin login.",
     thumbnail: "/thumbnails/kutilang.png",
-    tech: ["HTML", "CSS", "Bootstrap", "PHP", "MySQL"],
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
     link: "https://kutilang.sch.id/",
   },
   {
@@ -146,7 +165,7 @@ const projects = [
       "Product showcase site for an outdoor lifestyle brand, combining classic layout with modern aesthetics.",
     thumbnail: "/thumbnails/ocraactivity.png",
     badge: "Domain deactivated by client",
-    tech: ["HTML", "CSS", "Bootstrap"],
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     link: "https://ryankalansi.github.io/ocraactivity/",
   },
   {
