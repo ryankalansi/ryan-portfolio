@@ -215,7 +215,9 @@ export const About = () => {
                 <div className="pt-2 border-t border-white/5">
                   <p className="text-gray-500 text-xs">Relevant Coursework:</p>
                   <p className="text-gray-400 text-xs mt-1">
-                    Web Development, Database Management System
+                    Analysis and Design of Information Systems, Database
+                    Management System, Distributed systems, Human–Computer
+                    Interaction, Web Development
                   </p>
                 </div>
               </div>
