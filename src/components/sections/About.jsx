@@ -136,7 +136,7 @@ export const About = () => {
           <div className="rounded-2xl p-8 border border-white/10 bg-white/2 mb-8">
             <p className="text-gray-300 text-base leading-relaxed mb-8">
               I'm a Web Developer with over{" "}
-              <span className="text-emerald-400 font-medium">2 years</span> of
+              <span className="text-emerald-400 font-medium">3 years</span> of
               hands-on experience building tailored web solutions. Whether it's
               crafting an interactive landing page or architecting a complex
               internal dashboard, my focus is always on writing clean code that

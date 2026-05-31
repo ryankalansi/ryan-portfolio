@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
   try {
     const data = await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>", // Ganti jika domain sudah diverifikasi di Resend
+      from: "Portfolio <onboarding@resend.dev>",
       to: "kalansiryan@gmail.com",
       subject: `New Inquiry from ${name}`,
       html: `

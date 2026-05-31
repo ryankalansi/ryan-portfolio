@@ -179,6 +179,10 @@ export const TrujivaShowcase = ({ onClose }) => {
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
               },
               {
+                name: "TypeScript",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+              },
+              {
                 name: "TailwindCSS",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
               },

@@ -268,27 +268,26 @@ export const RootsFinanceShowcase = ({ onClose }) => {
               {
                 name: "Next.js 16",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-                color: "bg-[#111827] text-white border-[#374151]",
               },
               {
                 name: "React",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-                color: "bg-cyan-50 text-cyan-800 border-cyan-200",
+              },
+              {
+                name: "TypeScript",
+                icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
               },
               {
                 name: "TailwindCSS",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-                color: "bg-teal-50 text-teal-800 border-teal-200",
               },
               {
                 name: "PostgreSQL",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-                color: "bg-blue-50 text-blue-800 border-blue-200",
               },
               {
                 name: "Supabase",
                 icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
-                color: "bg-[#ECFDF5] text-[#059669] border-[#A7F3D0]",
               },
             ].map((tech) => (
               <div

@@ -26,7 +26,6 @@ export const Contact = () => {
       });
 
       if (response.ok) {
-        // Kalimat diganti agar tidak ketahuan pakai Resend
         toast.success("Message sent! I'll get back to you shortly.", {
           id: loadingToast,
         });

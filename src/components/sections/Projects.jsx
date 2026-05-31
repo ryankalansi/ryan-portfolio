@@ -178,7 +178,6 @@ const projects = [
   },
 ];
 
-// Menerima props onOpenShowcase dari App.jsx
 export const Projects = ({ onOpenShowcase }) => {
   return (
     <section
@@ -252,7 +251,6 @@ export const Projects = ({ onOpenShowcase }) => {
 
                   {(project.link || project.demo || project.showcaseId) && (
                     <div className="flex flex-wrap gap-2 pt-3 mt-auto border-t border-white/5">
-                      {/* Tombol yang memicu fungsi internal React */}
                       {project.showcaseId && (
                         <button
                           onClick={() => onOpenShowcase(project.showcaseId)}
