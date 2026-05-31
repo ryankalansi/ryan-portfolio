@@ -99,7 +99,7 @@ export const Home = () => {
                 </div>
                 {/* Floating badge */}
                 <div className="absolute -bottom-2 -right-2 bg-gray-900 border border-white/10 rounded-xl px-3 py-2 text-xs text-gray-300">
-                  <span className="text-emerald-400 font-bold">2+</span> yrs exp
+                  <span className="text-emerald-400 font-bold">3</span> yrs exp
                 </div>
               </div>
             </div>
